@@ -11,6 +11,10 @@ void call(Map parameters = [:]) {
     final script = checkScript(this, parameters) ?: this
 
     echo "called from my fork"
+    //print all config parameters
+    echo "fork parameters.config: ${parameters.config}"
+
+
 
     List credentials = [
         [type: 'ssh', id: 'gitSshKeyCredentialsId'],
