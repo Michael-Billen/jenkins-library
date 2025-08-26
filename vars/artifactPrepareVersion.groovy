@@ -10,6 +10,8 @@ import static com.sap.piper.Prerequisites.checkScript
 void call(Map parameters = [:]) {
     final script = checkScript(this, parameters) ?: this
 
+    echo "called from my fork"
+
     List credentials = [
         [type: 'ssh', id: 'gitSshKeyCredentialsId'],
         [type: 'usernamePassword', id: 'gitHttpsCredentialsId', env: ['PIPER_username', 'PIPER_password']],
