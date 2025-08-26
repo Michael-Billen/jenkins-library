@@ -113,6 +113,8 @@ func runArtifactPrepareVersion(config *artifactPrepareVersionOptions, telemetryD
 	telemetryData.BuildTool = config.BuildTool
 	telemetryData.FilePath = config.FilePath
 
+	log.Entry().Infof("My Form is called also inside runArtifactPrepareVersion")
+
 	// Options for artifact
 	artifactOpts := versioning.Options{
 		GlobalSettingsFile:      config.GlobalSettingsFile,
