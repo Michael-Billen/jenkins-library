@@ -11,6 +11,7 @@ void call(Map parameters = [:]) {
     final script = checkScript(this, parameters) ?: this
 
     echo "called from my fork"
+    echo "fork parameters: ${parameters}"
     //print all config parameters
     echo "fork parameters.config: ${parameters.config}"
 
